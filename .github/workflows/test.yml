@@ -93,7 +93,7 @@ jobs:
     - name: Test in Tribblix
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/tribblix-vm@6fde4df35cc7a4dfc7e170e3f8707998d6f75a0e
+      uses: vmactions/tribblix-vm@5ee5dba536212ba0edfccdd4ef67ee4ed421c492
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -228,7 +228,7 @@ jobs:
     - name: Test in Tribblix
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/tribblix-vm@6fde4df35cc7a4dfc7e170e3f8707998d6f75a0e
+      uses: vmactions/tribblix-vm@5ee5dba536212ba0edfccdd4ef67ee4ed421c492
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -364,7 +364,7 @@ jobs:
     - name: Test in Tribblix
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/tribblix-vm@6fde4df35cc7a4dfc7e170e3f8707998d6f75a0e
+      uses: vmactions/tribblix-vm@5ee5dba536212ba0edfccdd4ef67ee4ed421c492
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -487,7 +487,7 @@ jobs:
     - name: Test in Tribblix
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/tribblix-vm@6fde4df35cc7a4dfc7e170e3f8707998d6f75a0e
+      uses: vmactions/tribblix-vm@5ee5dba536212ba0edfccdd4ef67ee4ed421c492
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -616,7 +616,7 @@ jobs:
     - name: Test in Tribblix
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/tribblix-vm@6fde4df35cc7a4dfc7e170e3f8707998d6f75a0e
+      uses: vmactions/tribblix-vm@5ee5dba536212ba0edfccdd4ef67ee4ed421c492
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -693,7 +693,7 @@ jobs:
     - name: Test in Tribblix
       id: testerr
       continue-on-error: true 
-      uses: vmactions/tribblix-vm@6fde4df35cc7a4dfc7e170e3f8707998d6f75a0e
+      uses: vmactions/tribblix-vm@5ee5dba536212ba0edfccdd4ef67ee4ed421c492
       with:
         usesh: true
         debug: true
@@ -721,7 +721,7 @@ jobs:
     - name: Test in Tribblix
       id: testpass
       continue-on-error: true 
-      uses: vmactions/tribblix-vm@6fde4df35cc7a4dfc7e170e3f8707998d6f75a0e
+      uses: vmactions/tribblix-vm@5ee5dba536212ba0edfccdd4ef67ee4ed421c492
       with:
         usesh: true
         debug: true
