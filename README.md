@@ -67,7 +67,7 @@ jobs:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
         prepare: |
-          zap install socat
+          
 
         run: |
           if [ -n "test" ]; then
