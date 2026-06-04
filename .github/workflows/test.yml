@@ -93,11 +93,11 @@ jobs:
     - name: Test in Tribblix
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/tribblix-vm@2825f6937f9c62421364c26fdcc39ecb1a0b5593
+      uses: vmactions/tribblix-vm@5c0daca2ff7612d36797a0ce5896a586a3c16c71
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
-          zap install socat
+          
         mem: 4096
         release: ${{ matrix.release }}
         arch: ${{ matrix.arch }}
@@ -228,11 +228,11 @@ jobs:
     - name: Test in Tribblix
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/tribblix-vm@2825f6937f9c62421364c26fdcc39ecb1a0b5593
+      uses: vmactions/tribblix-vm@5c0daca2ff7612d36797a0ce5896a586a3c16c71
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
-          zap install socat
+          
         mem: 4096
         release: ${{ matrix.release }}
         arch: ${{ matrix.arch }}
@@ -364,11 +364,11 @@ jobs:
     - name: Test in Tribblix
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/tribblix-vm@2825f6937f9c62421364c26fdcc39ecb1a0b5593
+      uses: vmactions/tribblix-vm@5c0daca2ff7612d36797a0ce5896a586a3c16c71
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
-          zap install socat
+          
         mem: 4096
         release: ${{ matrix.release }}
         arch: ${{ matrix.arch }}
@@ -487,11 +487,11 @@ jobs:
     - name: Test in Tribblix
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/tribblix-vm@2825f6937f9c62421364c26fdcc39ecb1a0b5593
+      uses: vmactions/tribblix-vm@5c0daca2ff7612d36797a0ce5896a586a3c16c71
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
-          zap install socat
+          
         mem: 4096
         release: ${{ matrix.release }}
         arch: ${{ matrix.arch }}
@@ -616,11 +616,11 @@ jobs:
     - name: Test in Tribblix
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/tribblix-vm@2825f6937f9c62421364c26fdcc39ecb1a0b5593
+      uses: vmactions/tribblix-vm@5c0daca2ff7612d36797a0ce5896a586a3c16c71
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
-          zap install socat
+          
         mem: 4096
         release: ${{ matrix.release }}
         arch: ${{ matrix.arch }}
@@ -693,7 +693,7 @@ jobs:
     - name: Test in Tribblix
       id: testerr
       continue-on-error: true 
-      uses: vmactions/tribblix-vm@2825f6937f9c62421364c26fdcc39ecb1a0b5593
+      uses: vmactions/tribblix-vm@5c0daca2ff7612d36797a0ce5896a586a3c16c71
       with:
         usesh: true
         debug: true
@@ -721,7 +721,7 @@ jobs:
     - name: Test in Tribblix
       id: testpass
       continue-on-error: true 
-      uses: vmactions/tribblix-vm@2825f6937f9c62421364c26fdcc39ecb1a0b5593
+      uses: vmactions/tribblix-vm@5c0daca2ff7612d36797a0ce5896a586a3c16c71
       with:
         usesh: true
         debug: true
