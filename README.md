@@ -19,21 +19,7 @@ All the supported releases are here:
 
 | Release | x86_64   |
 |---------|----------|
-| 0m39    |  ✅     |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| 0m39    |  ✅ (rsync,scp,nfs)     |
 
 
 
