@@ -20,6 +20,7 @@ All the supported releases are here:
 | Release | x86_64   |
 |---------|----------|
 | 0m39    |  ✅ (rsync,scp,nfs)     |
+| 0m40    |  ✅ (rsync,scp,nfs)     |
 
 
 
@@ -197,7 +198,7 @@ The VM is using all the cpu cores of the host by default, you can use `cpu` opti
 
 ## 5. Select release
 
-It uses [the Tribblix 0m39](conf/default.release.conf) by default, you can use `release` option to use another version of Tribblix:
+It uses [the Tribblix 0m40](conf/default.release.conf) by default, you can use `release` option to use another version of Tribblix:
 
 ```yaml
 ...
