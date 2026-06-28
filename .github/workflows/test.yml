@@ -28,7 +28,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release: [ "0m39", ""]
+        release: [ "0m39", "0m40", ""]
         arch: [ "aarch64", "", "riscv64", "powerpc64", "sparc64", "ppc64le", "s390x"]
         runs: [ "ubuntu-24.04", "ubuntu-24.04-arm"]
         exclude:
@@ -56,6 +56,18 @@ jobs:
           - release: "0m39"
             arch: ppc64le
           - release: "0m39"
+            arch: s390x
+          - release: "0m40"
+            arch: aarch64
+          - release: "0m40"
+            arch: riscv64
+          - release: "0m40"
+            arch: powerpc64
+          - release: "0m40"
+            arch: sparc64
+          - release: "0m40"
+            arch: ppc64le
+          - release: "0m40"
             arch: s390x
           - release: ""
             arch: aarch64
@@ -91,7 +103,7 @@ jobs:
     - name: Test in Tribblix
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'sshfs') }}
       id: test
-      uses: vmactions/tribblix-vm@8dc7fcf81fa8798961697ef35cd113c13f96f565
+      uses: vmactions/tribblix-vm@e1112c8707ee0ac4419f11f6abad99739dee4a53
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -168,7 +180,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release: [ "0m39", ""]
+        release: [ "0m39", "0m40", ""]
         arch: [ "aarch64", "", "riscv64", "powerpc64", "sparc64", "ppc64le", "s390x"]
         runs: [ "ubuntu-24.04", "ubuntu-24.04-arm"]
         exclude:
@@ -197,6 +209,18 @@ jobs:
             arch: ppc64le
           - release: "0m39"
             arch: s390x
+          - release: "0m40"
+            arch: aarch64
+          - release: "0m40"
+            arch: riscv64
+          - release: "0m40"
+            arch: powerpc64
+          - release: "0m40"
+            arch: sparc64
+          - release: "0m40"
+            arch: ppc64le
+          - release: "0m40"
+            arch: s390x
           - release: ""
             arch: aarch64
           - release: ""
@@ -223,7 +247,7 @@ jobs:
     - name: Test in Tribblix
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'nfs') }}
       id: test
-      uses: vmactions/tribblix-vm@8dc7fcf81fa8798961697ef35cd113c13f96f565
+      uses: vmactions/tribblix-vm@e1112c8707ee0ac4419f11f6abad99739dee4a53
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -301,7 +325,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release: [ "0m39", ""]
+        release: [ "0m39", "0m40", ""]
         arch: [ "aarch64", "", "riscv64", "powerpc64", "sparc64", "ppc64le", "s390x"]
         runs: [ "ubuntu-24.04", "ubuntu-24.04-arm"]
         exclude:
@@ -329,6 +353,18 @@ jobs:
           - release: "0m39"
             arch: ppc64le
           - release: "0m39"
+            arch: s390x
+          - release: "0m40"
+            arch: aarch64
+          - release: "0m40"
+            arch: riscv64
+          - release: "0m40"
+            arch: powerpc64
+          - release: "0m40"
+            arch: sparc64
+          - release: "0m40"
+            arch: ppc64le
+          - release: "0m40"
             arch: s390x
           - release: ""
             arch: aarch64
@@ -363,7 +399,7 @@ jobs:
     - name: Test in Tribblix
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'scp') }}
       id: test
-      uses: vmactions/tribblix-vm@8dc7fcf81fa8798961697ef35cd113c13f96f565
+      uses: vmactions/tribblix-vm@e1112c8707ee0ac4419f11f6abad99739dee4a53
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -426,7 +462,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release: [ "0m39", ""]
+        release: [ "0m39", "0m40", ""]
         arch: [ "aarch64", "", "riscv64", "powerpc64", "sparc64", "ppc64le", "s390x"]
         runs: [ "ubuntu-24.04", "ubuntu-24.04-arm"]
         disableCache: [ "", "true"]
@@ -456,6 +492,18 @@ jobs:
             arch: ppc64le
           - release: "0m39"
             arch: s390x
+          - release: "0m40"
+            arch: aarch64
+          - release: "0m40"
+            arch: riscv64
+          - release: "0m40"
+            arch: powerpc64
+          - release: "0m40"
+            arch: sparc64
+          - release: "0m40"
+            arch: ppc64le
+          - release: "0m40"
+            arch: s390x
           - release: ""
             arch: aarch64
           - release: ""
@@ -482,7 +530,7 @@ jobs:
     - name: Test in Tribblix
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       id: test
-      uses: vmactions/tribblix-vm@8dc7fcf81fa8798961697ef35cd113c13f96f565
+      uses: vmactions/tribblix-vm@e1112c8707ee0ac4419f11f6abad99739dee4a53
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -554,7 +602,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release: [ "0m39", ""]
+        release: [ "0m39", "0m40", ""]
         arch: [ "aarch64", "", "riscv64", "powerpc64", "sparc64", "ppc64le", "s390x"]
         runs: [ "ubuntu-24.04", "ubuntu-24.04-arm"]
         exclude:
@@ -583,6 +631,18 @@ jobs:
             arch: ppc64le
           - release: "0m39"
             arch: s390x
+          - release: "0m40"
+            arch: aarch64
+          - release: "0m40"
+            arch: riscv64
+          - release: "0m40"
+            arch: powerpc64
+          - release: "0m40"
+            arch: sparc64
+          - release: "0m40"
+            arch: ppc64le
+          - release: "0m40"
+            arch: s390x
           - release: ""
             arch: aarch64
           - release: ""
@@ -609,7 +669,7 @@ jobs:
     - name: Test in Tribblix
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       id: test
-      uses: vmactions/tribblix-vm@8dc7fcf81fa8798961697ef35cd113c13f96f565
+      uses: vmactions/tribblix-vm@e1112c8707ee0ac4419f11f6abad99739dee4a53
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -686,7 +746,7 @@ jobs:
     - name: Test in Tribblix
       id: testerr
       continue-on-error: true
-      uses: vmactions/tribblix-vm@8dc7fcf81fa8798961697ef35cd113c13f96f565
+      uses: vmactions/tribblix-vm@e1112c8707ee0ac4419f11f6abad99739dee4a53
       with:
         usesh: true
         debug: true
@@ -714,7 +774,7 @@ jobs:
     - name: Test in Tribblix
       id: testpass
       continue-on-error: true
-      uses: vmactions/tribblix-vm@8dc7fcf81fa8798961697ef35cd113c13f96f565
+      uses: vmactions/tribblix-vm@e1112c8707ee0ac4419f11f6abad99739dee4a53
       with:
         usesh: true
         debug: true
