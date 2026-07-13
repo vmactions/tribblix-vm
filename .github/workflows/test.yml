@@ -103,7 +103,7 @@ jobs:
     - name: Test in Tribblix
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'sshfs') }}
       id: test
-      uses: vmactions/tribblix-vm@f04f05874306fd362b0e838102642d93b65d4899
+      uses: vmactions/tribblix-vm@8c1c74d2941978461c36fd4065627020c5be43b2
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -268,7 +268,7 @@ jobs:
     - name: Test in Tribblix
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'nfs') }}
       id: test
-      uses: vmactions/tribblix-vm@f04f05874306fd362b0e838102642d93b65d4899
+      uses: vmactions/tribblix-vm@8c1c74d2941978461c36fd4065627020c5be43b2
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -441,7 +441,7 @@ jobs:
     - name: Test in Tribblix
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'scp') }}
       id: test
-      uses: vmactions/tribblix-vm@f04f05874306fd362b0e838102642d93b65d4899
+      uses: vmactions/tribblix-vm@8c1c74d2941978461c36fd4065627020c5be43b2
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -593,7 +593,7 @@ jobs:
     - name: Test in Tribblix
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       id: test
-      uses: vmactions/tribblix-vm@f04f05874306fd362b0e838102642d93b65d4899
+      uses: vmactions/tribblix-vm@8c1c74d2941978461c36fd4065627020c5be43b2
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -753,7 +753,7 @@ jobs:
     - name: Test in Tribblix
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       id: test
-      uses: vmactions/tribblix-vm@f04f05874306fd362b0e838102642d93b65d4899
+      uses: vmactions/tribblix-vm@8c1c74d2941978461c36fd4065627020c5be43b2
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -851,7 +851,7 @@ jobs:
     - name: Test in Tribblix
       id: testerr
       continue-on-error: true
-      uses: vmactions/tribblix-vm@f04f05874306fd362b0e838102642d93b65d4899
+      uses: vmactions/tribblix-vm@8c1c74d2941978461c36fd4065627020c5be43b2
       with:
         usesh: true
         debug: true
@@ -879,7 +879,7 @@ jobs:
     - name: Test in Tribblix
       id: testpass
       continue-on-error: true
-      uses: vmactions/tribblix-vm@f04f05874306fd362b0e838102642d93b65d4899
+      uses: vmactions/tribblix-vm@8c1c74d2941978461c36fd4065627020c5be43b2
       with:
         usesh: true
         debug: true
