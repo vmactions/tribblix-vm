@@ -105,7 +105,7 @@ jobs:
 ```
 
 
-The latest major version is: `v1`, which is the most recommended to use. (You can also use the latest full version: `v1.0.6`)  
+The latest major version is: `v1`, which is the most recommended to use. (You can also use the latest full version: `v1.0.7`)  
 
 
 If you are migrating from the previous `v0`, please change the `runs-on: ` to `runs-on: ubuntu-latest`
@@ -230,7 +230,7 @@ The VM is using all the cpu cores of the host by default, you can use `cpu` opti
 
 ## 5. Select release
 
-It uses [the Tribblix 0m41](conf/default.release.conf) by default, you can use `release` option to use another version of Tribblix:
+It uses [the Tribblix 0m41.1](conf/default.release.conf) by default, you can use `release` option to use another version of Tribblix:
 
 ```yaml
 ...
@@ -242,6 +242,19 @@ It uses [the Tribblix 0m41](conf/default.release.conf) by default, you can use `
 ...
 ```
 
+You can also give only the leading, `.` separated part of a release. The newest release that starts with it is used, so the workflow does not have to be edited for every point release:
+
+```yaml
+...
+    - name: Test
+      id: test
+      uses: vmactions/tribblix-vm@v1
+      with:
+        release: "0m41"
+...
+```
+
+Here `release: "0m41"` runs the newest `0m41.x` release of Tribblix. Every leading part works the same way, this action ships 0m39, 0m40, 0m41. Each part you give has to match in full, so a release that does not exist fails the job instead of quietly falling back to another one.
 
 ## 6. Select architecture
 
